@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'NelnaLizzyChae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/NelnaLizzyChae.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* IBM Plex Sans Regular */
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #BA55D3;
+}
+.chatBotPage{
+    text-align: center;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+
+#topText{
+    font-family: 'IBMPlexSansKR-Regular';
+}
+.chatBotPage > .talkBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    margin: 0px auto;
+    margin-bottom: 50px;
+    width: 500px;
+    height: 200px;
+
+
+    font-family: 'NelnaLizzyChae';
+    font-size: 35px;
+    color: #1ccedb;
+
+    background-color: transparent;
+    border-radius: 2%;
+    border: 2px solid #1074ef
+}
+
+
+.chatBotPage > div > img{
+    width: 150px;
+}
+.chatBotPage > div > .inputText{
+    margin: 50px 0px 20px;
+    width: 300px;
+    border: 2px solid #1074ef;
+}
+.chatBotPage > div > .submitBtn{
+    width: 250px;
+    height: 50px;
+
+
+    font-family: 'IBMPlexSansKR-Regular';
+    font-size: 20px;
+
+
+    color: white;
+    background-color: #1074ef;
+    outline: 0;
+    border: 0;
+
+
+    cursor: pointer;
+}
+img{
+    width: 120px;
+}
+body{margin:0;}

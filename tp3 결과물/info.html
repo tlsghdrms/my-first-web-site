@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFO</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
+</head>
+
+<body>
+    <div class="toggle">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+    </div>
+    
+    <div class="navigation">
+        <ul>
+
+            <li class="list active">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">MAIN</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <span class="title">PROFILE</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="chatbot.html">
+                    <span class="icon"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></span>
+                    <span class="title">CHAT</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="https://www.youtube.com/playlist?list=PLtJ9I_0y7eIDsJhJdYkcE2c-KaBqvHY0v">
+                    <span class="icon"><ion-icon name="logo-youtube"></ion-icon></span>
+                    <span class="title">MEDIA</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="frame">
+        
+        <nav class="navigator">
+            <h3 class="site-name">SHIN HONG GEUN</h3>
+            <span id="datetime"></span>
+            <ul>
+                <li><a class="nav-menu" href="main.html">MAIN</a></li>
+                <li><a class="nav-menu" href="info.html">PROFILE</a></li>
+            </ul>
+        </nav>
+
+        <div class="profile-section">
+            <img id="profile-picture" src="profile-picture.jpg">
+            <div class="introduction">
+                <h2>ABOUT ME</h2>
+                <p>이름 : 신홍근<br>
+                    MBTI : ISTP<br>
+                    취미 : 수영<br>
+                    특기 : 배드민턴<br>
+                </p>
+                <h2>STUDY</h2>
+                <p id="capability">HTML<br>
+                    C<br>
+                    JAVA</p>
+            </div>
+        </div>
+
+        <h5 class="value-menu">MY PROFILE</h5>
+
+        <div class="value-section">
+
+            <div class="value">
+                <img class="value-icon" src="school.png">
+                <div class="value-intro">
+                    <h4 class="value-name">학력사항</h4>
+                    
+                    <p class="value-exp">
+                        - 영통초등학교 2007년 ~ 2013년<br>
+                        - 영통중학교 2013년 ~ 2016년<br>
+                        - 태장고등학교 2016년 ~ 2019년<br>
+                        - 건국대학교 컴퓨터공학과 재학중 <br>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="value">
+                <img class="value-icon" src="family.png">
+                <div class="value-intro">
+                    <h4 class="value-name">가족사항</h4>
+                    <p class="value-exp">
+                        - 아버지<br>
+                        - 어머니<br>
+                        - 형<br>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="value">
+                <img class="value-icon" src="swear.png">
+                <div class="value-intro">
+                    <h2 class="value-name">좌우명 :  용의 꼬리가 되기보다는 뱀의 머리가 되자</h2>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            
+            <p class="footer-coment"><br>
+                Icons created by <a href="https://www.Freepik.com/" title="Freepik">Freepik </a>from
+                <a href="https://www.Flaticon.com/" title="Flaticon"> Flaticon</a></p>
+        </footer>
+       
+    </div>
+    <button onclick="moveToTop()" class="btn-moveTop"></button>
+
+    <script>
+        function getCurrentDateTime() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() + 1;
+            var day = now.getDate();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+    
+            var datetime = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
+            return datetime;
+        }
+        document.getElementById('datetime').innerHTML = getCurrentDateTime();
+        setInterval(function() {
+            document.getElementById('datetime').innerHTML = getCurrentDateTime();
+        }, 1000);
+        
+        //
+        function moveToTop(){
+            window.scrollTo({top:0, left:0, behavior:'smooth'});
+        }
+        //
+        let list = document.querySelectorAll('.list');
+    
+        for(let i=0; i < list.length; i++){
+            list[i].onclick = function() {
+                let j=0;
+                while(j < list.length){
+                    list[j++].className = 'list';
+                }
+                list[i].className = 'list active';
+            }
+        }
+        // 
+        let menuToggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+    
+        menuToggle.onclick = function() {
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+        
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

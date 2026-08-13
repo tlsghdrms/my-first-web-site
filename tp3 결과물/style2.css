@@ -1,0 +1,139 @@
+body {
+    font-family: 'Mont Sans KR', sans-serif;
+    background-color: #BA55D3;
+}
+
+.outline{
+    color: black;
+    text-align: center;
+}
+
+.outline a{
+    text-decoration: none;
+    color: #000;
+}
+
+.outline a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+table {
+    margin-left:auto; 
+    margin-right:auto;
+    table-layout: auto;
+}
+
+table, td, th {
+    border-collapse : collapse;
+    border : 2px solid black;
+    text-align: left
+    
+};
+
+.page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+
+  
+.page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+  
+.page-numbers a {
+    margin: 0 5px;
+}
+
+.page a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 5px;
+}
+
+.page a:hover {
+    text-decoration: underline;
+}
+
+
+hr {
+    height: 3px;
+    background-color: orange; 
+    border: none;
+    margin: 0;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    
+}
+
+.main_text{
+    
+    align-self: center;
+    margin: 0px 30px;
+}
+
+
+.thumbnail{
+    width: 350px;
+    border-radius: 20px;
+    margin-top: 15px;
+    
+}
+
+#thumb2{
+    margin-top: 15px;
+}
+
+
+.summary{
+    align-self: center;
+    text-align: center;
+    border: 4px dashed black;
+}
+
+.exception{
+    margin: 0;
+}
+
+.about-java {
+    display: flex;
+    
+    
+    font-size: 16px;
+    text-align: center;
+    align-self: center;
+}
+
+/* test */
+
+#back-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  
+    border: none;
+    border-radius: 16px;
+    background: rgb(35, 188, 186);
+    color: black;
+    padding: 12px;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px gray;
+    cursor: pointer;
+    
+}
+
+#back-link a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+
